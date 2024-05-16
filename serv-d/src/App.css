@@ -118,10 +118,18 @@ body {
 }
 #linksContainer {
   padding: 2em;
+  box-shadow: var(--paperMimic);
+  border-radius: 5px;
+  min-width: 25rem;
+  max-width: 35rem;
+  /* max-width: 30rem; */
+
+  /* background-color: blue; */
 }
 
 .homePageLink {
   font-family: var(--uglyFont);
+  font-size: 2rem;
 }
 
 #homePageFooter {
@@ -163,11 +171,13 @@ body {
 
 .footerPRC {
   margin-top: -1em;
+  /* width: 75vw;  */
 }
 
 #footerPRCNameContainer {
   padding: 1em 0.5em 0 0.5em;
   font-weight: bold;
+  /* width: */
   /* background-color: red; */
 }
 
@@ -180,6 +190,7 @@ body {
 
 #footerDisclosure {
   font-size: smaller;
+  width: 75vw;
 }
 
 #footerDisclosureContainer {

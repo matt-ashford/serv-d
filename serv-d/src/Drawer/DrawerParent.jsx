@@ -56,7 +56,7 @@ const DrawerParent = (props) => {
     const listItems = inputArray.map((el, idx) => {
       const { text, path } = el;
       return (
-        <NavLink to={path} key={`navLink${text}`}>
+        <NavLink to={path} key={`navLink${text}`} style={{ color: "black" }}>
           <ListItem
             key={text}
             onClick={() => {
