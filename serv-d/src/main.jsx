@@ -7,6 +7,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFoundPage from "./mailClassComponents/NotFound/NotFound.jsx";
 import AllMarketDominant from "./mailClassComponents/allMarketDominant/AllMarketDominant.jsx";
 import { MailClassPage } from "./MailClassPage/MailClassPage.jsx";
+import DrawerParent from "./Drawer/Drawer.jsx";
+// import Drawer02 from "./Drawer/Drawer02.jsx";
+// import Drawer02 from "./Drawer/Drawer02.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +51,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
