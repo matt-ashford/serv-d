@@ -6,6 +6,8 @@ import Divider from "@mui/material/Divider";
 import sty from "./HomePage.module.css";
 import Logo from "../../Design/prcIcon.svg";
 import Footer from "../Footer/Footer";
+import fcWeeklyData from "../../Data/FC_weekly.json";
+import LineGraphFCWeekly from "../../DashComponents/LineGraphFCWeekly/LineGraphFCWeekly";
 
 import DashContents from "./HomePageContents";
 
@@ -175,7 +177,7 @@ export const HomePage = () => {
             <br />
             <br />
             <div className={sty.homePageGraphContainer}>
-              {/* <LineGraphFCWeekly data={fcWeeklyData} /> */}
+              <LineGraphFCWeekly data={fcWeeklyData} />
             </div>
 
             <br />
