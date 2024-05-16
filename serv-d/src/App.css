@@ -66,25 +66,6 @@ body {
   min-width: 400px;
 }
 
-/* HOME PAGE STUFF  */
-
-.homePageTextContainerLeft {
-  margin-left: 10em;
-  margin-top: 10em;
-}
-
-.homePageTextContainerLeft:first-child {
-  margin-left: 10em;
-  margin-top: 2em;
-  margin-bottom: 5em;
-}
-
-.homePageTextContainerLeft:not(:first-child) {
-  margin-left: 13em;
-  margin-bottom: 3em;
-  text-align: left;
-}
-
 .homePageHeader {
   color: var(--siteHeaders);
   font-family: var(--uglyFont);

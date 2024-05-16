@@ -65,15 +65,15 @@ export const HomePage = () => {
       <DrawerParent />
       {/* <div className={sty.homePageFull}> */}
       <div className={sty.titleAndLogoContainer}>
-        <Grid item xs={9} className="homePageTextContainerLeft">
-          <h1 className="homePageHeader">Welcome</h1>
-          <h5 variant="h5">
+        <div className={sty.homePageTextContainerLeft}>
+          <p className={sty.homePageWelcome}>Welcome</p>
+          <p className={sty.subTitle}>
             Postal Regulatory Commission Service Performance Dashboard
-          </h5>
+          </p>
           <div id="topLogoContainer">
             <img src={Logo} alt="Your SVG" />
           </div>
-        </Grid>
+        </div>
       </div>
 
       <div className={sty.introTextContainer}>
@@ -141,35 +141,33 @@ export const HomePage = () => {
       </div>
       <div className={sty.introTextContainer}>
         <Grid>
-          <h3 className="homePageHeader">About this Dashboard</h3>
+          <p className={sty.homePageHeader}>About this Dashboard</p>
           <br />
-          <h6 variant="h6">
-            <p className="aboutDashPara">
-              The Postal Service sets service standards for products and product
-              components, which identify the amount of time within which a
-              customer can ordinarily expect a mailpiece to be delivered
-              (expected days-to-delivery). The Postal Service also sets service
-              performance targets for products and product components, which
-              impose a goal for the percentage of measured mailpieces that
-              should be delivered within their applicable service standard
-              (on-time percent target). This dashboard provides a visual
-              comparison of the actual percentage of measured Market Dominant
-              mailpieces delivered on-time, which means within their applicable
-              service standard (the service performance score), with the service
-              performance targets established by USPS.
-            </p>
-            <p className="aboutDashPara">
-              The public data contained in the dashboard are obtained from the
-              Commission’s Annual Compliance Review dockets and will change
-              throughout time as data are updated.
-            </p>
-            <p className="aboutDashPara">
-              The Commission’s dashboard is interactive, allowing users to
-              explore and reveal service performance information by hovering
-              over data points. When hovering over an element of visual data, a
-              pop-up will provide additional information.{" "}
-            </p>
-          </h6>
+          <p className={sty.dashIntroPara}>
+            The Postal Service sets service standards for products and product
+            components, which identify the amount of time within which a
+            customer can ordinarily expect a mailpiece to be delivered (expected
+            days-to-delivery). The Postal Service also sets service performance
+            targets for products and product components, which impose a goal for
+            the percentage of measured mailpieces that should be delivered
+            within their applicable service standard (on-time percent target).
+            This dashboard provides a visual comparison of the actual percentage
+            of measured Market Dominant mailpieces delivered on-time, which
+            means within their applicable service standard (the service
+            performance score), with the service performance targets established
+            by USPS.
+          </p>
+          <p className="aboutDashPara">
+            The public data contained in the dashboard are obtained from the
+            Commission’s Annual Compliance Review dockets and will change
+            throughout time as data are updated.
+          </p>
+          <p className="aboutDashPara">
+            The Commission’s dashboard is interactive, allowing users to explore
+            and reveal service performance information by hovering over data
+            points. When hovering over an element of visual data, a pop-up will
+            provide additional information.{" "}
+          </p>
 
           <br />
           <br />
@@ -179,16 +177,14 @@ export const HomePage = () => {
 
           <br />
           <br />
-          <h4 variant="h4" className="homePageHeader">
-            Dashboard Contents
-          </h4>
+          <p className={sty.homePageHeader}>Dashboard Contents</p>
 
           {/* <DashContents /> */}
         </Grid>
       </div>
       <div className={sty.additionalResourcesLinkes}>
         <Paper elevation={3} id="linksContainer">
-          <h4 className="homePageHeader">Additional Resources</h4>
+          <p className={sty.homePageHeader}>Additional Resources</p>
           <br />
           <h6>{acdLinksHtml}</h6>
         </Paper>
