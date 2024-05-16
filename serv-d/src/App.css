@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Exo:wght@200;500&family=Oxygen:wght@300&display=swap");
+
+:root {
+  --shadedDiv: hsla(307, 0%, 80%, 0.4);
+  --darkerShading: hsla(254, 0%, 60%, 0.6);
+  --siteHeaders: rgb(66, 90, 128);
+  --uglyFont: "Arvo", serif;
+  --niceFont: "Roboto", sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+body {
+  /* font-family: "Josefin Sans", cursive; */
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Arvo", serif; */
+  /* font-family: "Exo", sans-serif; */
+  /* font-family: "Oxygen", sans-serif; */
+}
+
+/* ALL MD STUFF   */
+
+#allMdContainer {
+  margin-left: 200px;
+  margin-right: 100px;
+}
+
+#topFirstClassGraphContainer {
+  height: 400px;
+  /* margin-bottom: -1rem;
+  margin-bottom: -1rem; */
+}
+#topMarketingGraphContainer {
+  height: 400px;
+  /* margin-bottom: -1rem;
+  margin-bottom: -1rem; */
+}
+
+#gridSpacing {
+  margin-top: -2rem;
+}
+
+#gridSpacing2 {
+  margin-top: 1rem;
+}
+
+.allMdTableHeader {
+  inline-size: 200px;
+  text-align: center;
+}
+
+.allMdTableHeader:nth-child(2) {
+  inline-size: 100px;
+  text-align: center;
+}
+
+.allMdTableHeader:last-child {
+  inline-size: 150px;
+  text-align: center;
+}
+
+#topAnnualVolume {
+  min-width: 400px;
+}
+
+/* HOME PAGE STUFF  */
+
+.homePageTextContainerLeft {
+  margin-left: 10em;
+  margin-top: 10em;
+}
+
+.homePageTextContainerLeft:first-child {
+  margin-left: 10em;
+  margin-top: 2em;
+  margin-bottom: 5em;
+}
+
+.homePageTextContainerLeft:not(:first-child) {
+  margin-left: 13em;
+  margin-bottom: 3em;
+  text-align: left;
+}
+
+.homePageHeader {
+  color: var(--siteHeaders);
+  font-family: var(--uglyFont);
+}
+
+#homePageGraphContainer {
+  /* background-color: blueviolet; */
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+}
+
+#homePageGraphInnerContainer {
+  width: 525px;
+  border: 1px solid grey;
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
+
+.aboutDashPara {
+  text-align: left;
+  font-family: var(--niceFont);
+}
+
+.strikeThrough {
+  color: red;
+}
+
+#topLogoContainer {
+  transform: scale(0.6);
+  margin-bottom: -10em;
+}
+
+#contactInfoContainer {
+  padding: 1em;
+  background-color: var(--shadedDiv);
+}
+
+#homeLetterGraphContainer {
+  border: 1px solid black;
+  margin-bottom: 6em;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 2em;
+  width: 475px;
+}
+
+.homePageLetterGraphTitle {
+  font-size: 20px;
+}
+#linksContainer {
+  padding: 2em;
+}
+
+.homePageLink {
+  font-family: var(--uglyFont);
+}
+
+#homePageFooter {
+  background-color: var(--shadedDiv);
+  /* height: 8em; */
+  padding-top: 2em;
+  /* align-items: left; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: -100rem;
+  /* position: sticky; */
+  /* bottom: 0; */
+}
+
+#footerLogoAndName {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  /* background-color: grey; */
+}
+
+#footerLogoContainer {
+  padding: 1em 0.5em 0 0.5em;
+  width: 122px;
+  height: 75px;
+  transform: scale(0.2);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  margin-top: -3em;
+  /* background-color: green; */
+}
+
+#glossaryList {
+  font-weight: lighter;
+}
+
+.footerPRC {
+  margin-top: -1em;
+}
+
+#footerPRCNameContainer {
+  padding: 1em 0.5em 0 0.5em;
+  font-weight: bold;
+  /* background-color: red; */
+}
+
+#footerAddressContainer {
+  padding: 1em 0.5em 0 0.5em;
+  /* background-color: purple; */
+  float: right;
+  text-align: left;
+}
+
+#footerDisclosure {
+  font-size: smaller;
+}
+
+#footerDisclosureContainer {
+  margin-top: 40px;
+  margin-left: 160px;
+  max-width: 70rem;
+
+  /* max-width: 65vw; */
+  /* text-align: left; */
+}
+
+#footerEmailContainer {
+  margin-top: -50px;
+  margin-bottom: 40px;
+  margin-left: -50px;
+  font-size: smaller;
+  /* background-color: var(--darkerShading); */
+  display: inline-block;
+  padding: 0 1em 0 1em;
+  /* border: 1px solid black; */
+}
+
+@media (max-width: 1088px) {
+  #homePageFooter {
+    width: 100vw;
+  }
+
+  #footerDisclosureContainer {
+    width: 90vw;
+    margin-left: -10rem;
+  }
+
+  #footerLogoAndName {
+    margin-left: -10rem;
+  }
+}
+
+/* @media (max-width: 1088px) { */
+@media only screen and (max-width: 1088px) {
+  #homePageFooter {
+    width: 1088px;
+    align-items: left;
+    /* padding-right: -20rem; */
+    /* background-color: aqua; */
+  }
+
+  #footerDisclosureContainer {
+    width: 90vw;
+    /* margin-left: 0rem; */
+  }
+}
+
+#footerEmailContainer a:link {
+  text-decoration: underline;
+}
+
+#iconAndLinkContainer {
+  margin-left: 40px;
+}
+
+#iconsContainer {
+  display: flex;
+  /* flex-direction: row; */
+  flex-direction: row;
+  font-size: smallest;
+
+  align-items: flex-start;
+  transform: scale(1.2);
+
+  gap: 5px;
+  margin-bottom: 10px;
+  /* background-color: green; */
+}
+
+#tweetPageLink {
+  margin-left: -10px;
+  margin-top: 100px;
+  text-decoration: underline;
+}
+
+.iconLink {
+  color: black;
+}
+
+#dashIntroPara {
+  text-align: left;
+  font-size: 1.3em;
+  font-family: var(--uglyFont);
+}
+
+#dashIntroPara :link {
+  text-decoration: underline;
+}
+
+.homePageTextIdentifier {
+  color: red;
+}
+
+.undelineMe {
+  text-decoration: underline;
+}
+
+#homePageContentsList {
+  width: 800px;
+  text-align: center;
+  font-family: var(--uglyFont);
+}
+
+.contentsListItem {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: 20px;
+  font-size: 18.5px;
+}
+
+/* PRODUCT GRAPH STUFF  */
+
+#productSvg {
+  margin-left: 1.5em;
+}
+
+/* CLASS LEVEL STUFF  */
+
+#classTitleTextContainer {
+  margin-top: 15px;
+}
+
+#mailClassDefContainer {
+  width: 800px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* PRODUCT PAGE */
+
+#productDefContainer {
+  margin-top: 30px;
+  width: 800px;
+}
+
+/* VOLUME CHANGE COMPONENT   */
+
+#volumeChangeContainer {
+  /* max-width: 500px;
+  min-width: 450px; */
+  max-width: 350px;
+  min-width: 350px;
+  /* background-color: blue; */
+}
+
+#downloadButton {
+  text-decoration: none !important;
+}
+
+a {
+  text-decoration: none;
+}
