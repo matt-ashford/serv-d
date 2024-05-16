@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 // import App from "./App.jsx";
 import HomePage from "./mailClassComponents/HomePage/HomePage.jsx";
 import "./index.css";
+import "./App.css";
+
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFoundPage from "./mailClassComponents/NotFound/NotFound.jsx";
 import AllMarketDominant from "./mailClassComponents/allMarketDominant/AllMarketDominant.jsx";
 import { MailClassPage } from "./MailClassPage/MailClassPage.jsx";
-import DrawerParent from "./Drawer/Drawer.jsx";
-// import Drawer02 from "./Drawer/Drawer02.jsx";
-// import Drawer02 from "./Drawer/Drawer02.jsx";
+import DrawerParent from "./Drawer/DrawerParent.jsx";
 
 const router = createBrowserRouter([
   {

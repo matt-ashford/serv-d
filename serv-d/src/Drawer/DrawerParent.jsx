@@ -1,20 +1,16 @@
 import React, { useState } from "react";
 import {
   Drawer,
-  Button,
   List,
   ListItem,
-  ListItemButton,
   ListItemText,
   Divider,
   Box,
 } from "@mui/material";
 import styles from "./Drawer.module.css";
-// import DehazeIcon from "@mui/icons-material/Dehaze";
 
 import { NavLink } from "react-router-dom";
 
-// export const Drawer02 = (props) => {
 const DrawerParent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,10 +18,33 @@ const DrawerParent = (props) => {
     setIsOpen(binaryInput);
   }
 
-  const mailClassNames = [
+  const mailClassLinks = [
     {
       text: "First-Class Mail",
       path: "/first-class",
+    },
+    {
+      text: "USPS Marketing Mail",
+      path: "/marketing-mail",
+    },
+    {
+      text: "Periodicals",
+      path: "/periodicals",
+    },
+    {
+      text: "Package Services",
+      path: "/package-services",
+    },
+    {
+      text: "Special Services",
+      path: "/special-services",
+    },
+  ];
+
+  const homeLinks = [
+    {
+      text: "Home",
+      path: "/",
     },
     {
       text: "All Market Dominant",
@@ -53,7 +72,8 @@ const DrawerParent = (props) => {
     return <List>{listItems}</List>;
   }
 
-  const classNav = listFunc(mailClassNames);
+  const classNav = listFunc(mailClassLinks);
+  const homeNav = listFunc(homeLinks);
 
   const openBtnFunc = (isOpen) => {
     if (!isOpen) {
@@ -75,24 +95,13 @@ const DrawerParent = (props) => {
       <div className={styles.leftDiv}> {openBtn}</div>
       <div className={styles.content}>
         <Drawer anchor="left" open={isOpen} onClose={() => changeDrawer(false)}>
-          <Box sx={{ width: "10rem" }}>{classNav}</Box>
+          <Box sx={{ width: "13rem" }}>{homeNav}</Box>
+          <Divider />
+          <Box sx={{ width: "13rem" }}>{classNav}</Box>
         </Drawer>
       </div>
     </div>
   );
 };
 
-// export default withRouter(Drawer02);
 export default DrawerParent;
-
-{
-  /* <div className={styles.leftDiv}> {openBtn}</div>
-<div className={styles.content}>
-  <Drawer anchor="left" open={isOpen} onClose={() => changeDrawer(false)}>
-    <Box sx={{ width: "10rem" }}>
-      {homeNav}
-
-    </Box>
-  </Drawer>
-</div> */
-}
