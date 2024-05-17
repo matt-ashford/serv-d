@@ -37,6 +37,7 @@
   font-size: 2rem;
 }
 .homePageWelcome {
+  margin-top: 12rem;
   font-size: 6rem;
   color: var(--siteHeaders);
   font-family: var(--niceFont);
