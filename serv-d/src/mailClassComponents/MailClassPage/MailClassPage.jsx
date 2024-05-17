@@ -133,14 +133,14 @@ export const MailClassPage = (props) => {
                 selectedYear={selectedYear}
               />
             </div>
+            <div className={countTableClassName}>
+              <ProductCountTable
+                propData={joinedDataAnnual}
+                selectedYear={selectedYear}
+                mailClassName={mailClassName}
+              />
+            </div>
           </div>
-        </div>
-        <div className={countTableClassName}>
-          <ProductCountTable
-            propData={joinedDataAnnual}
-            selectedYear={selectedYear}
-            mailClassName={mailClassName}
-          />
         </div>
       </div>
       <div className={styles.mailClassDefContainer}>

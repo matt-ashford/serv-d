@@ -104,8 +104,8 @@
 }
 
 .outerContainerProductCountFC {
-  margin-top: 34rem;
-  margin-left: -9rem;
+  /* margin-top: 34rem; */
+  /* margin-left: -9rem; */
   display: flex;
   flex-direction: column;
   width: 10rem;
@@ -170,19 +170,23 @@
   margin-bottom: 3rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1180px) {
+  .graphAndCountTableContainer {
+    flex-direction: column;
+  }
   .outerContainerProductCount {
     flex-direction: row;
     margin-top: 2rem;
     width: 50rem;
-    margin-left: -3rem;
+    margin-left: -1.5rem;
   }
 
   .outerContainerProductCountFC {
+    /* background-color: pink; */
     flex-direction: row;
     margin-top: 1rem;
     width: 50rem;
-    margin-left: 1rem;
+    margin-left: -1.5rem;
   }
 
   .topHalf {
