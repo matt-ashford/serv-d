@@ -1,8 +1,37 @@
 import DrawerParent from "../../Drawer/DrawerParent";
 import styles from "./allMD.module.css";
 import Footer from "../Footer/Footer";
+import YearDropdown from "../../DashComponents/UIBits/YearDropdown";
+import annualData from "../../Data/annual - Updated.json";
+import quarterlyData from "../../Data/quarterly - Updated";
+import { joinDataWithProdKey } from "../../DataManipulation/join";
+import volumeData from "../../Data/volume.json";
+import generateCountData from "./genearteMDCountData";
+import { useEffect, useState } from "react";
 
 export const AllMarketDominant = (props) => {
+  const [selectedYear, setSelectedYear] = useState(2023);
+
+  const joinedDataAnnual = joinDataWithProdKey(annualData);
+  const joinedDataForDownload = joinedDataAnnual.map((row) => {
+    row.quarter = "annual";
+    return row;
+  });
+
+  const joinedDataQtr = joinDataWithProdKey(quarterlyData);
+
+  const totalMDVol = volumeData.filter((row) => row.mailClass === "MD");
+
+  const countDataTopLevel = generateCountData(selectedYear, joinedDataAnnual);
+
+  function changeYearSelected(e) {
+    setSelectedYear(e.target.value);
+  }
+
+  const lettersTwoDayId = 59;
+  const lettersThreeDayId = 99;
+  const keeperProds = [lettersTwoDayId, lettersThreeDayId];
+
   return (
     <>
       <DrawerParent />
@@ -29,11 +58,11 @@ export const AllMarketDominant = (props) => {
       </div>
       <div className={styles.yearDropdownContainer}>
         <div className={styles.emptyDiv_yearDropdown}></div>
-        {/* <YearDropdown
+        <YearDropdown
           propData={annualData}
           selectedYear={selectedYear}
           changeYearSelected={changeYearSelected}
-        /> */}
+        />
       </div>
       <div className={styles.lowerHalfEmptyDiv}></div>
 
