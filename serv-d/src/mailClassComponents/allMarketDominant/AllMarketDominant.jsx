@@ -1,12 +1,21 @@
 import DrawerParent from "../../Drawer/DrawerParent";
 import styles from "./allMD.module.css";
+import CountBarGraph from "../../DashComponents/CountBarGraph/CountBarGraph";
 import Footer from "../Footer/Footer";
 import YearDropdown from "../../DashComponents/UIBits/YearDropdown";
 import annualData from "../../Data/annual - Updated.json";
 import quarterlyData from "../../Data/quarterly - Updated";
+import LineGraphDoubleSeries from "../../DashComponents/LineGraphDoubleSeries/LineGraphDoubleSeries";
+import ProductCountTableMD from "./ProductCountTableMD";
+import PieGraph from "../../DashComponents/PieGraph/PieGraph";
+
+// import DownloadButton from "../../UIBits/DownloadButton/DownloadButton";
+import DownloadButton from "../../DashComponents/UIBits/DownloadButton/DownloadButton";
+
 import { joinDataWithProdKey } from "../../DataManipulation/join";
 import volumeData from "../../Data/volume.json";
 import generateCountData from "./genearteMDCountData";
+
 import { useEffect, useState } from "react";
 
 export const AllMarketDominant = (props) => {
@@ -35,59 +44,63 @@ export const AllMarketDominant = (props) => {
   return (
     <>
       <DrawerParent />
-      <div className={styles.allMDContainer}>
-        <div className={styles.titleContainer}>
-          <p>All Market Dominant Products</p>
-        </div>
-      </div>
-      <div className={styles.barGraphAndLineContainer}>
-        <div className={styles.barGraphContainer}>
-          {/* <CountBarGraph propData={joinedDataAnnual} /> */}
-        </div>
-        <div className={styles.lineGraphContainer}>
-          <div className={styles.lineGraphTitle}>
-            <div>Service Performance Scores</div>
-            <div>First Class Single-Piece Letters and Cards</div>
+      <div>
+        <div className={styles.allMDContainer}>
+          <div className={styles.titleContainer}>
+            <p>All Market Dominant Products</p>
           </div>
-          {/* 
-          <LineGraphDoubleSeries
-            keeperProds={keeperProds}
-            joinedDataQtr={joinedDataQtr}
-          /> */}
         </div>
-      </div>
-      <div className={styles.yearDropdownContainer}>
-        <div className={styles.emptyDiv_yearDropdown}></div>
-        <YearDropdown
-          propData={annualData}
-          selectedYear={selectedYear}
-          changeYearSelected={changeYearSelected}
-        />
-      </div>
-      <div className={styles.lowerHalfEmptyDiv}></div>
+        <div className={styles.barGraphAndLineContainer}>
+          <div className={styles.barGraphContainer}>
+            <CountBarGraph propData={joinedDataAnnual} />
+          </div>
+          <div className={styles.lineGraphContainer}>
+            <div className={styles.lineGraphTitle}>
+              <div>Service Performance Scores</div>
+              <div>First Class Single-Piece Letters and Cards</div>
+            </div>
 
-      <div className={`${styles.lowerHalf}`}>
-        <div className={styles.tableContainer}>
-          {/* <ProductCountTableMD
-          countData={countDataTopLevel}
-          selectedYear={selectedYear}
-        /> */}
-        </div>
-        <div className={styles.pieGraphAndDownloadBtn}>
-          <div className={styles.pieGraphContainer}>
-            {/* <PieGraph
-            countData={countDataTopLevel}
-            selectedYear={selectedYear}
-          /> */}
+            <LineGraphDoubleSeries
+              keeperProds={keeperProds}
+              joinedDataQtr={joinedDataQtr}
+            />
           </div>
-          <div className={styles.downloadBtnContainer}>
-            {/* <DownloadButton
-            propData={joinedDataForDownload}
-            dataName={"Market Dominant Data"}
-            dataType="libRef"  */}
+        </div>
+        <div className={styles.yearDropdownContainer}>
+          <div className={styles.emptyDiv_yearDropdown}></div>
+          <YearDropdown
+            propData={annualData}
+            selectedYear={selectedYear}
+            changeYearSelected={changeYearSelected}
+          />
+        </div>
+        <div className={styles.lowerHalfEmptyDiv}></div>
+
+        <div className={`${styles.lowerHalf}`}>
+          <div className={styles.tableContainer}>
+            <ProductCountTableMD
+              countData={countDataTopLevel}
+              selectedYear={selectedYear}
+            />
+          </div>
+          <div className={styles.pieGraphAndDownloadBtn}>
+            <div className={styles.pieGraphContainer}>
+              <PieGraph
+                countData={countDataTopLevel}
+                selectedYear={selectedYear}
+              />
+            </div>
+            <div className={styles.downloadBtnContainer}>
+              <DownloadButton
+                propData={joinedDataForDownload}
+                dataName={"Market Dominant Data"}
+                dataType="libRef"
+              />
+            </div>
           </div>
         </div>
       </div>
+
       <div className={styles.footerSpacer}></div>
       <Footer />
     </>

@@ -6,7 +6,12 @@
 
 .allMDContainer {
   /* margin-top: -100vh; */
-  margin-left: 4rem;
+  /* margin-left: 20rem; */
+  /* padding-left: 5rem; */
+  /* background-color: black; */
+}
+.outerContainer {
+  /* margin-left: 20rem; */
 }
 .barGraphAndLineContainer {
   display: flex;
@@ -14,6 +19,7 @@
   height: 21rem;
   width: 100vw;
   transition: flex-direction 300ms ease;
+  margin-left: 5rem;
 }
 
 .barGraphContainer {
@@ -43,6 +49,7 @@
 .lowerHalf {
   display: flex;
   flex-direction: row;
+  margin-left: 5rem;
 }
 
 .downloadBtnContainer {
@@ -85,6 +92,7 @@
 .titleContainer {
   /* flex-grow: 1; */
   margin-top: -10rem;
+  padding-left: 3rem;
   /* background-color: aqua; */
   width: 100vw;
   font-size: 2.5rem;
