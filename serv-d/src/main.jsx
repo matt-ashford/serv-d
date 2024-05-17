@@ -8,7 +8,9 @@ import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFoundPage from "./mailClassComponents/NotFound/NotFound.jsx";
 import AllMarketDominant from "./mailClassComponents/allMarketDominant/AllMarketDominant.jsx";
-import { MailClassPage } from "./MailClassPage/MailClassPage.jsx";
+// import { MailClassPage } from "./MailClassPage/MailClassPage.jsx";
+
+import MailClassPage from "./mailClassComponents/MailClassPage/MailClassPage.jsx";
 import DrawerParent from "./Drawer/DrawerParent.jsx";
 
 const router = createBrowserRouter([
