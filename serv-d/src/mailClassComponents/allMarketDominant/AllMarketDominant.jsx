@@ -44,7 +44,7 @@ export const AllMarketDominant = (props) => {
   return (
     <>
       <DrawerParent />
-      <div>
+      <div className={styles.outerContainer}>
         <div className={styles.allMDContainer}>
           <div className={styles.titleContainer}>
             <p>All Market Dominant Products</p>

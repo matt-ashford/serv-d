@@ -1,4 +1,3 @@
-// import Typography from "@material-ui/core/Typography";
 import { useEffect, useState } from "react";
 import ClassGraphSingleYear from "../../DashComponents/ClassGraphSingleYear/ClassLevelGraph";
 import ProductCountTable from "../../DashComponents/UIBits/productCountTable/ProductCountTable";
@@ -8,11 +7,10 @@ import DownloadButton from "../../DashComponents/UIBits/DownloadButton/DownloadB
 import Footer from "../Footer/Footer";
 
 import MailClassDef from "../../DashComponents/UIBits/MailClassDef";
-// import MailClassDef from "../../DashComponents/MailClassDef";
 
 import { joinDataWithProdKey } from "../../DataManipulation/join";
 import { filterAnnualComparison } from "../../DataManipulation/filterAnnualComparison";
-// import ProductPage from "../ProductPage/ProductPage";
+import ProductPage from "../ProductPage/ProductPage";
 import annualData from "../../Data/annual - Updated.json";
 import quarterData from "../../Data/quarterly - Updated.json";
 import fcWeeklyData from "../../Data/FC_weekly.json";
@@ -156,11 +154,11 @@ export const MailClassPage = (props) => {
           mailClass={mailClassName}
         />
 
-        {/* <ProductPage
-        selectedProductId={selectedProductId}
-        joinedDataAnnual={joinedDataAnnual}
-        joinedDataQtr={joinedDataQtr}
-      /> */}
+        <ProductPage
+          selectedProductId={selectedProductId}
+          joinedDataAnnual={joinedDataAnnual}
+          joinedDataQtr={joinedDataQtr}
+        />
       </div>
 
       <Footer />
