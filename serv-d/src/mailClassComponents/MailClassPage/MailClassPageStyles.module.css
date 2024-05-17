@@ -9,12 +9,9 @@
   display: flex;
   flex-direction: column;
 
-  /* padding-top: -20rem; */
   padding-top: 6rem;
-  /* background-color: azure; */
 }
 .isFirstClass {
-  /* margin-top: 1rem; */
 }
 .notFirstClass {
   margin-bottom: 2rem;
