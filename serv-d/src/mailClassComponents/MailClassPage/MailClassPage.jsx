@@ -1,10 +1,10 @@
 // import Typography from "@material-ui/core/Typography";
 import { useEffect, useState } from "react";
-// import ClassGraphSingleYear from "../../DashComponents/ClassGraphSingleYear/ClassLevelGraph";
-// import ProductCountTable from "../../DashComponents/UIBits/productCountTable/ProductCountTable";
+import ClassGraphSingleYear from "../../DashComponents/ClassGraphSingleYear/ClassLevelGraph";
+import ProductCountTable from "../../DashComponents/UIBits/productCountTable/ProductCountTable";
 // import ProductDropdown from "../../DashComponents/UIBits/ProductDropdown/ProductDropdown";
-// import YearDropdown from "../../DashComponents/UIBits/YearDropdown";
-// import DownloadButton from "../../DashComponents/UIBits/DownloadButton/DownloadButton";
+import YearDropdown from "../../DashComponents/UIBits/YearDropdown";
+import DownloadButton from "../../DashComponents/UIBits/DownloadButton/DownloadButton";
 import Footer from "../Footer/Footer";
 
 // import MailClassDef from "../../DashComponents/MailClassDef";
@@ -99,45 +99,48 @@ export const MailClassPage = (props) => {
                 </div>
 
                 <div className={styles.fcWeeklyContainer}>
-                  {/* <LineGraphFCWeekly data={fcWeeklyData} /> */}
+                  <LineGraphFCWeekly data={fcWeeklyData} />
                   <div className={styles.downloadBtnContainerWeekly}>
-                    {/* <DownloadButton
-                    propData={fcWeeklyData}
-                    dataName="First-Class Weekly Data"
-                    dataType={"FCWeekly"}
-                  /> */}
+                    <DownloadButton
+                      propData={fcWeeklyData}
+                      dataName="First-Class Weekly Data"
+                      dataType={"FCWeekly"}
+                    />
                   </div>
                 </div>
               </>
             ) : (
-              <div className={styles.notFirstClass}>
+              <>
+                <div className={styles.notFirstClass}> </div>
                 <div className={styles.pageTitleContainer}>
                   <p>{mailClassNameTitle(mailClassName)}</p>
                 </div>
-              </div>
+              </>
             )}
           </div>
-          {/* <YearDropdown
-          propData={annualData}
-          selectedYear={selectedYear}
-          changeYearSelected={changeYearSelected}
-        /> */}
+          <div className={styles.yearDropdownOuterContainer}>
+            <YearDropdown
+              propData={annualData}
+              selectedYear={selectedYear}
+              changeYearSelected={changeYearSelected}
+            />
+          </div>
           <div className={styles.graphAndCountTableContainer}>
             <div className={styles.classGraphOuterContainer}>
-              {/* <ClassGraphSingleYear
-              propData={filteredAnnualData}
-              mailClass={mailClassName}
-              selectedYear={selectedYear}
-            /> */}
+              <ClassGraphSingleYear
+                propData={filteredAnnualData}
+                mailClass={mailClassName}
+                selectedYear={selectedYear}
+              />
             </div>
           </div>
         </div>
         <div className={countTableClassName}>
-          {/* <ProductCountTable
-          propData={joinedDataAnnual}
-          selectedYear={selectedYear}
-          mailClassName={mailClassName}
-        /> */}
+          <ProductCountTable
+            propData={joinedDataAnnual}
+            selectedYear={selectedYear}
+            mailClassName={mailClassName}
+          />
         </div>
       </div>
       <div className={styles.mailClassDefContainer}>

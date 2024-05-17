@@ -1,8 +1,8 @@
 @import url("../../theme.css");
 
 .dropdownOuterContainer {
-  /* background-color: red; */
   width: 25rem;
+
   height: 4rem;
   margin-bottom: 1rem;
   display: flex;

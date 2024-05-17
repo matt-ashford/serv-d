@@ -1,4 +1,3 @@
-import Typography from "@material-ui/core/Typography";
 import { countTableDataFilter } from "./countTableDataFilter";
 import ProductCountBar from "./ProductCountBar";
 // import styles from "./ProductCountTableStyles.module.css";
@@ -36,17 +35,11 @@ export const ProductCountTable = (props) => {
     <>
       <div className={styles.outerContainerProductCount}>
         <div className={styles.countCell} id={styles.totalCountCountainer}>
-          <Typography
-            variant="h4"
-            align="left"
-            className={styles.tableTextNumber}
-          >
-            {cellData.productCount}
-          </Typography>
+          <p className={styles.tableTextNumber}>{cellData.productCount}</p>
           <br />
-          <Typography align="left" className={styles.tableText}>
+          <p className={styles.tableText}>
             {productOrComponent(mailClassName)} are Rated in this Class
-          </Typography>
+          </p>
 
           <ProductCountBar
             totalProductCount={cellData.productCount}
@@ -56,18 +49,12 @@ export const ProductCountTable = (props) => {
         </div>
 
         <div className={styles.countCell} id={styles.missedCountCountainer}>
-          <Typography
-            variant="h4"
-            align="left"
-            className={styles.tableTextNumber}
-          >
-            {cellData.missedTarget}
-          </Typography>
+          <p className={styles.tableTextNumber}>{cellData.missedTarget}</p>
           <br></br>
-          <Typography align="left" className={styles.tableText}>
+          <p className={styles.tableText}>
             {productOrComponent(mailClassName)} Missed their Targets in{" "}
             {selectedYear}
-          </Typography>
+          </p>
 
           <ProductCountBar
             totalProductCount={cellData.productCount}
@@ -76,18 +63,12 @@ export const ProductCountTable = (props) => {
           />
         </div>
         <div className={styles.countCell} id={styles.decCountContainer}>
-          <Typography
-            variant="h4"
-            align="left"
-            className={styles.tableTextNumber}
-          >
-            {cellData.decreasedCount}
-          </Typography>
+          <p className={styles.tableTextNumber}>{cellData.decreasedCount}</p>
           <br></br>
 
-          <Typography align="left" className={styles.tableText}>
+          <p align="left" className={styles.tableText}>
             {productOrComponent(mailClassName)} Decreased in {selectedYear}
-          </Typography>
+          </p>
           <ProductCountBar
             totalProductCount={cellData.productCount}
             thisCount={cellData.decreasedCount}
