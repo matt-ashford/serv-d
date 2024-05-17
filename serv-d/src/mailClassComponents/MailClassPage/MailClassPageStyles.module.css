@@ -92,7 +92,8 @@
 }
 
 .productPageContainer {
-  margin-left: -10rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .outerContainerProductCount {
@@ -165,7 +166,8 @@
 .mailClassDefContainer {
   width: 75vw;
   display: flex;
-  margin-left: -4rem;
+  /* margin-left: -4rem; */
+  padding-left: 6rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
 }
@@ -186,7 +188,7 @@
     flex-direction: row;
     margin-top: 1rem;
     width: 50rem;
-    margin-left: -1.5rem;
+    /* margin-left: 30rem; */
   }
 
   .topHalf {
@@ -198,13 +200,13 @@
   .outerContainerProductCount {
     transform: scale(0.8);
     margin-top: -1rem;
-    margin-left: -8rem;
+    margin-left: -5rem;
   }
 
   .outerContainerProductCountFC {
     transform: scale(0.8);
     margin-top: -1rem;
-    margin-left: -8rem;
+    margin-left: -5rem;
   }
 
   .classGraphOuterContainer {
@@ -225,12 +227,12 @@
     grid-gap: 0;
     margin-top: -3rem;
     width: 20rem;
-    margin-left: -5rem;
+    margin-left: -1rem;
   }
 
   .classGraphOuterContainer {
     transform: scale(0.7);
     margin-left: -11.5rem;
-    margin-top: -5rem;
+    /* margin-top: -5rem; */
   }
 }

@@ -2,11 +2,12 @@
 import { useEffect, useState } from "react";
 import ClassGraphSingleYear from "../../DashComponents/ClassGraphSingleYear/ClassLevelGraph";
 import ProductCountTable from "../../DashComponents/UIBits/productCountTable/ProductCountTable";
-// import ProductDropdown from "../../DashComponents/UIBits/ProductDropdown/ProductDropdown";
+import ProductDropdown from "../../DashComponents/UIBits/ProductDropdown/ProductDropdown";
 import YearDropdown from "../../DashComponents/UIBits/YearDropdown";
 import DownloadButton from "../../DashComponents/UIBits/DownloadButton/DownloadButton";
 import Footer from "../Footer/Footer";
 
+import MailClassDef from "../../DashComponents/UIBits/MailClassDef";
 // import MailClassDef from "../../DashComponents/MailClassDef";
 
 import { joinDataWithProdKey } from "../../DataManipulation/join";
@@ -144,16 +145,16 @@ export const MailClassPage = (props) => {
         </div>
       </div>
       <div className={styles.mailClassDefContainer}>
-        {/* <MailClassDef mailClass={mailClassName} /> */}
+        <MailClassDef mailClass={mailClassName} />
       </div>
       <div className={styles.productPageContainer}>
-        {/* <ProductDropdown
-        propDataAnnual={joinedDataAnnual}
-        propDataQuarterly={joinedDataQtr}
-        selectedProductId={selectedProductId}
-        changeProductSelected={changeProductSelected}
-        mailClass={mailClassName}
-      /> */}
+        <ProductDropdown
+          propDataAnnual={joinedDataAnnual}
+          propDataQuarterly={joinedDataQtr}
+          selectedProductId={selectedProductId}
+          changeProductSelected={changeProductSelected}
+          mailClass={mailClassName}
+        />
 
         {/* <ProductPage
         selectedProductId={selectedProductId}

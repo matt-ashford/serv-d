@@ -1,6 +1,7 @@
 import { countTableDataFilter } from "./countTableDataFilter";
 import ProductCountBar from "./ProductCountBar";
 // import styles from "./ProductCountTableStyles.module.css";
+import { Typography } from "@mui/material";
 
 import styles from "../../../mailClassComponents/MailClassPage/MailClassPageStyles.module.css";
 import { filterAnnualComparison } from "../../../DataManipulation/filterAnnualComparison";
@@ -35,11 +36,17 @@ export const ProductCountTable = (props) => {
     <>
       <div className={styles.outerContainerProductCount}>
         <div className={styles.countCell} id={styles.totalCountCountainer}>
-          <p className={styles.tableTextNumber}>{cellData.productCount}</p>
+          <Typography
+            variant="h4"
+            align="left"
+            className={styles.tableTextNumber}
+          >
+            {cellData.productCount}
+          </Typography>
           <br />
-          <p className={styles.tableText}>
+          <Typography align="left" className={styles.tableText}>
             {productOrComponent(mailClassName)} are Rated in this Class
-          </p>
+          </Typography>
 
           <ProductCountBar
             totalProductCount={cellData.productCount}
@@ -49,12 +56,18 @@ export const ProductCountTable = (props) => {
         </div>
 
         <div className={styles.countCell} id={styles.missedCountCountainer}>
-          <p className={styles.tableTextNumber}>{cellData.missedTarget}</p>
+          <Typography
+            variant="h4"
+            align="left"
+            className={styles.tableTextNumber}
+          >
+            {cellData.missedTarget}
+          </Typography>
           <br></br>
-          <p className={styles.tableText}>
+          <Typography align="left" className={styles.tableText}>
             {productOrComponent(mailClassName)} Missed their Targets in{" "}
             {selectedYear}
-          </p>
+          </Typography>
 
           <ProductCountBar
             totalProductCount={cellData.productCount}
@@ -63,12 +76,18 @@ export const ProductCountTable = (props) => {
           />
         </div>
         <div className={styles.countCell} id={styles.decCountContainer}>
-          <p className={styles.tableTextNumber}>{cellData.decreasedCount}</p>
+          <Typography
+            variant="h4"
+            align="left"
+            className={styles.tableTextNumber}
+          >
+            {cellData.decreasedCount}
+          </Typography>
           <br></br>
 
-          <p align="left" className={styles.tableText}>
+          <Typography align="left" className={styles.tableText}>
             {productOrComponent(mailClassName)} Decreased in {selectedYear}
-          </p>
+          </Typography>
           <ProductCountBar
             totalProductCount={cellData.productCount}
             thisCount={cellData.decreasedCount}
