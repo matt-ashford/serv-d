@@ -1,0 +1,231 @@
+@import url("../../theme.css");
+
+:root {
+  --insideLeftPush: -6rem;
+}
+
+.allMDContainer {
+  /* margin-top: -100vh; */
+  /* margin-left: 20rem; */
+  /* padding-left: 5rem; */
+  /* background-color: black; */
+}
+.outerContainer {
+  /* margin-left: 20rem; */
+}
+.barGraphAndLineContainer {
+  display: flex;
+  flex-direction: row;
+  height: 21rem;
+  width: 100vw;
+  transition: flex-direction 300ms ease;
+  margin-left: 5rem;
+}
+
+.barGraphContainer {
+  /* background-color: azure; */
+  width: 25rem;
+  height: 18rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: -6rem;
+
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: var(--paperMimic);
+}
+
+.lineGraphContainer {
+  width: 30rem;
+  height: 24rem;
+  margin-left: 2rem;
+  background-color: #fff;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: var(--paperMimic);
+}
+
+.lowerHalf {
+  display: flex;
+  flex-direction: row;
+  margin-left: 5rem;
+}
+
+.downloadBtnContainer {
+  /* background-color: aqua; */
+  padding-left: 4rem;
+  padding-top: 1rem;
+  margin-top: -4rem;
+}
+
+.pieGraphContainer {
+  /* background-color: bisque; */
+  grid-column: 2;
+  grid-row: 1;
+  transform: scale(0.65);
+}
+
+.pieGraphAndDownloadBtn {
+  display: flex;
+  flex-direction: column;
+}
+
+.yearDropdownContainer {
+  margin-top: 5rem;
+  /* margin-bottom: 2rem; */
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: blue; */
+  /* margin-top: 40rem; */
+  width: 30rem;
+  padding-left: 10rem;
+}
+
+.lineGraphTitle {
+  margin-left: 3rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 75%;
+}
+
+.titleContainer {
+  /* flex-grow: 1; */
+  margin-top: -3rem;
+  padding-left: 3rem;
+  /* background-color: aqua; */
+  width: 100vw;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  /* height: 50rem; */
+  /* width: 50rem; */
+}
+
+.mdGraphContainer {
+  max-width: 600px;
+  height: 500px;
+  margin-top: 2%;
+}
+
+.titleBox {
+  margin-top: 1%;
+}
+
+.tableContainer {
+  min-width: 550px;
+  max-height: 400px;
+  max-width: 800px;
+}
+
+.countTableTitle {
+  font-size: 1.5rem;
+}
+
+.table {
+  min-width: 400px;
+  max-height: 400px;
+  max-width: 800px;
+}
+.allMdTableHeader {
+  font-weight: bolder;
+  margin-bottom: -300px;
+}
+
+.tableHead {
+  font-weight: bolder;
+  /* background-color: black; */
+}
+
+.firstTableHead {
+  /* inline-size: 100px; */
+  text-align: left;
+  font-weight: bolder;
+  padding-bottom: -50px;
+}
+.tableRow {
+  padding-top: -1rem;
+  margin-top: -1rem;
+  /* background-color: black; */
+}
+.footerSpacer {
+  height: 500px;
+}
+
+@media (max-width: 1015px) {
+  .barGraphAndLineContainer {
+    flex-direction: column;
+  }
+
+  .lineGraphContainer {
+    transform: scale(0.9);
+    margin-left: -1rem;
+    margin-top: 1rem;
+  }
+  .yearDropdownContainer .emptyDiv_yearDropdown {
+    margin-top: 24rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .lowerHalf {
+    flex-direction: column;
+  }
+  .downloadBtnContainer {
+    margin-top: 16rem;
+    margin-left: -6rem;
+    /* margin-bottom: 20rem; */
+    padding-bottom: 11rem;
+    margin-top: 14rem;
+    transform: scale(0.9);
+  }
+  .pieGraphContainer {
+    margin-top: 2rem;
+  }
+  .pieGraphAndDownloadBtn {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 650px) {
+  .tableContainer {
+    transform: scale(0.9);
+    margin-left: -2rem;
+  }
+  .tableAndPieGraphGrid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pieGraphAndDownloadBtn {
+    flex-direction: column;
+  }
+  .downloadBtnContainer {
+    margin-top: -8rem;
+    margin-left: 1rem;
+    /* margin-bottom: 20rem; */
+    /* padding-bottom: 11rem; */
+    transform: scale(0.9);
+  }
+  .yearDropdownContainer {
+    margin-left: -7rem;
+  }
+}
+
+@media (max-width: 516px) {
+  .tableContainer {
+    transform: scale(0.84);
+    margin-left: -4.5rem;
+    padding-left: -1rem;
+  }
+
+  .countTableTitle {
+    margin-left: 2rem;
+  }
+}

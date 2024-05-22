@@ -29,9 +29,8 @@ export const {
   marginTop,
 } = classGraphDims;
 
-// export const yScale = d3.scaleLinear().domain([0, 100]).range([0, 250]);
-export const yScale = d3.scaleLinear().domain([50, 100]).range([0, 250]);
+export const yScale = d3.scaleLinear().domain([0, 100]).range([0, 250]);
 // export const yScaleRev = d3.scaleLinear().domain([0, 100]).range([250, 0]);
-export const yScaleRev = d3.scaleLinear().domain([0.5, 1]).range([250, 0]);
+export const yScaleRev = d3.scaleLinear().domain([0, 1]).range([250, 0]);
 
 export default yScale;
