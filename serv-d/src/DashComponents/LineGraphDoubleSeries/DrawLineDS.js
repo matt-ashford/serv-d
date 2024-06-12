@@ -3,12 +3,15 @@ import {
   topStart,
   yScale,
   yScaleRev,
+  yScaleRevPct,
   marginLeft,
   marginTop,
   determineRightPush,
 } from "./LineGraphDimensionsDS";
 
 export const drawLine = ({ svgId, graphData, xScale, xArray, seriesSeq }) => {
+  console.log(graphData);
+
   const svgSelection = d3.select(`#${svgId}`);
 
   const seriesColors = {
@@ -22,7 +25,7 @@ export const drawLine = ({ svgId, graphData, xScale, xArray, seriesSeq }) => {
   const valueline = d3
     .line()
     .x((d, i) => xScale(xArray[i]) + marginLeft + rightPush)
-    .y((d) => yScaleRev(d.pct_on_time) + bottomPush)
+    .y((d) => yScaleRevPct(d.pct_on_time) + bottomPush)
     .curve(d3.curveCardinal.tension(0.2));
 
   const linePath = svgSelection

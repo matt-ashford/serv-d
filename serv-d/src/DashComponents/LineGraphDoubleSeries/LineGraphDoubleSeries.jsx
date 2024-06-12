@@ -18,23 +18,40 @@ import {
 export const LineGraphDoubleSeries = (props) => {
   const { keeperProds, joinedDataQtr } = props;
 
-  const [graphDataFirstProd, setGraphDataFirstProd] = useState(
-    returnFilterGraphData(keeperProds[0], joinedDataQtr)
-  );
+  // const [isPctOnTimeScaled ,setIsPctOnTime] = useState(False)
 
-  const [graphDataSecondProd, setGraphDataSecondProd] = useState(
-    returnFilterGraphData(keeperProds[1], joinedDataQtr)
+  // const [graphDataFirstProd, setGraphDataFirstProd] = useState(
+  //   returnFilterGraphData(keeperProds[0], joinedDataQtr)
+  // );
+
+  // const [graphDataSecondProd, setGraphDataSecondProd] = useState(
+  //   returnFilterGraphData(keeperProds[1], joinedDataQtr)
+  // );
+
+  const graphDataFirstProd = returnFilterGraphData(
+    keeperProds[0],
+    joinedDataQtr
+  );
+  const graphDataSecondProd = returnFilterGraphData(
+    keeperProds[1],
+    joinedDataQtr
   );
 
   useEffect(() => {
     removeGraphElements();
     drawGraphElements();
   }, []);
+  // });
 
   useEffect(() => {
     removeGraphElements();
     drawGraphElements();
   }, [graphDataFirstProd]);
+
+  useEffect(() => {
+    removeGraphElements();
+    drawGraphElements();
+  }, [graphDataSecondProd]);
 
   function drawGraphElements() {
     drawYAxis(drawYAxisParams);
@@ -50,13 +67,12 @@ export const LineGraphDoubleSeries = (props) => {
   }
 
   function returnFilterGraphData(productId, dataset) {
-    return dataset
-      .filter((row) => row.product_id === productId)
-      .map((row) => {
-        const newPct = row.pct_on_time / 10;
-        row.pct_on_time = newPct;
-        return row;
-      });
+    return dataset.filter((row) => row.product_id === productId);
+    // .map((row) => {
+    //   let newPct = row.pct_on_time / 10;
+    //   row.pct_on_time = newPct;
+    //   return row;
+    // });
   }
   const svgId = "lineGraphDoubleSeriesSVG";
 

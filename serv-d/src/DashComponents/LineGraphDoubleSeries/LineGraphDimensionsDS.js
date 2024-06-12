@@ -40,6 +40,11 @@ export const yScaleRev = d3
   .domain([0, 1])
   .range([topStart, bottomStart]);
 
+export const yScaleRevPct = d3
+  .scaleLinear()
+  .domain([100, 0])
+  .range([bottomStart, topStart]);
+
 export const svgWidth = graphWidth - marginLeft - marginRight;
 
 export const determineRightPush = (graphData) => {

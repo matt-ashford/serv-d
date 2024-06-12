@@ -21,34 +21,34 @@ const DrawerParent = (props) => {
   const mailClassLinks = [
     {
       text: "First-Class Mail",
-      path: "/first-class",
+      path: "/service-performance/first-class",
     },
     {
       text: "USPS Marketing Mail",
-      path: "/marketing-mail",
+      path: "/service-performance/marketing-mail",
     },
     {
       text: "Periodicals",
-      path: "/periodicals",
+      path: "/service-performance/periodicals",
     },
     {
       text: "Package Services",
-      path: "/package-services",
+      path: "/service-performance/package-services",
     },
     {
-      text: "Special Services",
-      path: "/special-services",
+      text: "Sprcial Services",
+      path: "/service-performance/special-services",
     },
   ];
 
   const homeLinks = [
     {
       text: "Home",
-      path: "/",
+      path: "/service-performance/home",
     },
     {
       text: "All Market Dominant",
-      path: "/all-md",
+      path: "/service-performance/all-md",
     },
   ];
 
