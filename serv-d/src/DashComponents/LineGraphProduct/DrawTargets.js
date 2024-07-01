@@ -23,7 +23,8 @@ export const drawTargets = ({ svgId, graphData, xScale, xArray }) => {
     .line()
     .x((d, i) => xScale(xArray[i]) + marginLeft + rightPush)
     .y((d) => topStart - marginTop - yScale(d.target))
-    .curve(d3.curveStepBefore);
+    .curve(d3.curveStepAfter);
+  // .curve(d3.curveStepBefore);
   // .curve(d3.curveStep);
 
   svgSelection

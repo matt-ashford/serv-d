@@ -21,6 +21,10 @@ import { useEffect, useState } from "react";
 export const AllMarketDominant = (props) => {
   const [selectedYear, setSelectedYear] = useState(2023);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const joinedDataAnnual = joinDataWithProdKey(annualData);
   const joinedDataForDownload = joinedDataAnnual.map((row) => {
     row.quarter = "annual";
