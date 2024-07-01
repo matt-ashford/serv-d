@@ -11,7 +11,13 @@ import LineGraphFCWeekly from "../../DashComponents/LineGraphFCWeekly/LineGraphF
 
 import DashContents from "./HomePageContents";
 
+import { useEffect } from "react";
+
 export const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const acdLinksArray = [
     {
       address:

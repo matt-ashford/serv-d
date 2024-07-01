@@ -36,7 +36,7 @@ const DrawerParent = (props) => {
       path: "/service-performance/package-services",
     },
     {
-      text: "Sprcial Services",
+      text: "Special Services",
       path: "/service-performance/special-services",
     },
   ];

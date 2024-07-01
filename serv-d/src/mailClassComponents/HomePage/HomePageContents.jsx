@@ -17,27 +17,27 @@ const DashContents = (props) => {
   const mailClassNames = [
     {
       text: "All Market Dominant",
-      path: "/all-md",
+      path: "/service-performance/all-md",
     },
     {
       text: "First-Class Mail",
-      path: "/first-class",
+      path: "/service-performance/first-class",
     },
     {
       text: "USPS Marketing Mail",
-      path: "/marketing-mail",
+      path: "/service-performance/marketing-mail",
     },
     {
       text: "Periodicals",
-      path: "/periodicals",
+      path: "/service-performance/periodicals",
     },
     {
       text: "Package Services",
-      path: "/package-services",
+      path: "/service-performance/package-services",
     },
     {
       text: "Special Services",
-      path: "/special-services",
+      path: "/service-performance/special-services",
     },
   ];
 
@@ -51,8 +51,19 @@ const DashContents = (props) => {
     }
     const fullText = `${leadingText} ${text} ${trailingText}`;
 
+    // const handleLinkClick = (e, path) => {
+    //   e.preventDefault();
+    //   // window.location.href = path;
+    // };
+
     return (
       <div key={`div_${index}`} className={sty.homePageContentsContainer}>
+        {/* <a
+          key={`link_${index}`}
+          href={path}
+          onClick={(e) => handleLinkClick(e, path)}
+          style={{ color: "black", fontSize: "2rem", textDecoration: "none" }}
+        > */}
         <NavLink
           key={`link_${index}`}
           to={path}
@@ -67,6 +78,7 @@ const DashContents = (props) => {
             </ListItemButton>
           </ListItem>
         </NavLink>
+        {/* </a> */}
       </div>
     );
   });

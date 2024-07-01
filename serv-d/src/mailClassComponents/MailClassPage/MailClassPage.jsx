@@ -32,11 +32,13 @@ export const MailClassPage = (props) => {
   useEffect(() => {
     // setSelectedProductId(0);
     setSelectedProductId(defaultId(mailClassName));
+    window.scrollTo(0, 0);
   }, []);
 
   useEffect(() => {
     // setSelectedProductId(0);
     setSelectedProductId(defaultId(mailClassName));
+    window.scrollTo(0, 0);
   }, [mailClassName]);
 
   function defaultId(mailClass) {
